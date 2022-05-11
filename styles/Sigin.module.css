@@ -19,114 +19,81 @@
   background-color: rgb(0,0,0,0.8);
 
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-
 }
 
 .box {
+  background-color: black;
+  width: 30vw;
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50vw;  
-  
-}
-
-.card{
-  margin-top: 5vw;
-  width: 20vw;
-  height: 55vh;
-  display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  align-items: center;
+  padding: 50px 80px 50px 40px;
 }
 
-.card b{
+.box h1{
   background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  align-self: center;
 }
 
-.image {
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-}
-
-.linkButton{
-  margin: 0px 40px;
-  height: 10%;
-  border: 1px solid white;
-
-  background-color: rgb(0,0,0,0.6);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.linkButton:hover{
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  border: none;
-}
-.linkButton:hover b{
-  -webkit-text-fill-color: black;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 60vw;
-  height: 60vh;
-}
-
-.main h1 {
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.main h2 {
+.box p{
   color: white;
 }
-.mainBox{
+
+.box form{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 30vw;
-  
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
-.button{
-  background-color: rgb(0,0,0,0.6);
-  width: 40%;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.box form input{
+  width: 100%;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  color: black;
   border: 1px solid white;
 }
 
-.button b{
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.logginButton {
+  align-self: flex-end;
+  background: rgb(0,0,0,0.8);
+  color: white;
+  margin-top: 10px;
+  width: 50%;
+  font-size: 18px;
+  border: 1px solid white;
 }
 
-.button:hover{
+.logginButton:hover {
+  align-self: flex-end;
   background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  border: none;
+  color: black;
+  border: 1px solid #5d4a1f;
 }
 
-.button:hover b{
-  -webkit-text-fill-color: black;
+.linkButton {
+  color: red
+}
+
+.providerButton {
+  background: rgb(0,0,0,0.8);
+  border: solid 1px white;
+  margin-bottom: 25px;
+  color: white;
+  width: 100%;
+  height: 5vh;
+}
+
+.providerButton:hover{
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  color: black;
+  border: 1px solid #5d4a1f;
 }
