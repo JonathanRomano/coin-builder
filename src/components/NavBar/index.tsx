@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { signOut } from "next-auth/react"
 
-export default ({session}) => {
+export default function NavBar({session}){
     return (
         <div className={styles.NavBar}>
 
