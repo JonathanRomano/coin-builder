@@ -33,7 +33,7 @@ export default (props) => {
                     Object.values(providers).map((provider) => {
                         return (
                             <button className={styles.providerButton} key={provider['name']} onClick={() => signIn(provider['id'], {callbackUrl: '/'})}>
-                                {provider.name}
+                                {provider['name']}
                             </button>
                         )
                     })
