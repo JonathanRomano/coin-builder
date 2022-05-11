@@ -25,7 +25,7 @@ export default function Home(props) {
           
           <div className={styles.card}>
 
-            <Image className={styles.image} src={bot}/>
+            <Image className={styles.image} src={bot} alt="bot deriv binary"/>
 
             <Link href="https://google.com">  
               <div className={styles.linkButton}>
@@ -37,7 +37,7 @@ export default function Home(props) {
 
           <div className={styles.card}>
 
-            <Image className={styles.image} src={suporte}/>
+            <Image className={styles.image} src={suporte} alt="suporte"/>
             
             <Link href="https://google.com">  
               <div className={styles.linkButton}>

@@ -1,8 +1,8 @@
 import styles from "../../styles/Sigin.module.css"
 import { getProviders, signIn } from "next-auth/react"
 
-export default (props) => {
-
+export default function signInPage(props){
+    
     const { providers } = props
 
     return (<>
