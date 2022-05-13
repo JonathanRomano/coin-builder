@@ -1,3 +1,5 @@
 const dev = process.env.NODE_ENV !== 'production'
 
-export const server = dev ? "http://localhost:3000" : "http://localhost:3000"
+const server = dev ? "http://localhost:3000" : "https://coin-builder.vercel.app"
+
+export default server

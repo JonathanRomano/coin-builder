@@ -1,8 +1,8 @@
 import styles from '../styles/Home.module.css'
 import { getSession, signIn } from 'next-auth/react'
-import { MongoClient } from 'mongodb'
 import Image from 'next/image'
 import Link from 'next/link'
+import server from '../config'
 
 //importing components
 import NavBar from '../src/components/NavBar'
@@ -82,6 +82,20 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
   
   const session = await getSession(context)
+
+  if(session){
+    const response = await fetch(`${server}/api/user/getPermissions/${session.user.email}`)
+    const { permissions }= await response.json()
+
+    if(permissions === 'guest'){
+      return {
+        redirect: {
+          destination: '/createAccount',
+          permanent: false
+        }
+      }
+    }
+  }
 
   return {
     props: {
