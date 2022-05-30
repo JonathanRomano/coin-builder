@@ -21,7 +21,7 @@ export default async (req, res) => {
             permissions: 'guest'
         })
     }
-
+    
     res.status(200).json({
         permissions: user.permissions
     })

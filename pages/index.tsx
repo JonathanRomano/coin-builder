@@ -62,7 +62,7 @@ export default function Home(props) {
                   <b>Login</b>
                 </div>
               </Link>
-              <Link href='/'>
+              <Link href='/createAccount'>
                 <div className={styles.button}>
                   <b>criar conta</b>
                 </div>

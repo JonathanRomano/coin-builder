@@ -34,6 +34,18 @@
     width: 30vw;
 }
 
+.box h1 {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.endText{
+    padding: 10%;
+    color: white;
+}
+
 .form {
     color: white;
     display: flex;
@@ -64,3 +76,58 @@
     color: black;
     border: 1px solid #5d4a1f;
 }
+
+.loadingBox {
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstAcessContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.firstAcessContainer button {
+    width: 50vh;
+    height: 5vh;
+    border: none;
+    margin: 10px 0 0 0;
+
+}
+
+.firstAcessContainer button:hover{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+.firstAcessBox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 80vh;
+    width: 80vh;
+}
+
+.firstAcessBox form {
+    display: flex;
+    width: 50vh;
+    flex-direction: column;
+}
+
+.firstAcessBox form input {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    padding: 4px;
+    border: none
+}
+
