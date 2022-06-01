@@ -2,6 +2,13 @@
     background-color: rgb(0, 0, 0, 0.7);
 }
 
+.container h1 {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .background {
     position: absolute;
     left: 0;
@@ -27,5 +34,16 @@
     width: 100%;
     align-self: flex-start;
     padding: 1% 10%;
-    border-bottom: 1px white solid
+    border-top: 1px white solid
+}
+
+.card button {
+    width: 150px;
+    height: 4vh;
+    border: none;
+}
+
+.card button:hover {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }

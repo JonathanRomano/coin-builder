@@ -27,7 +27,7 @@ export default function Home(props) {
 
             <Image className={styles.image} src={bot} alt="bot deriv binary"/>
 
-            <Link href="https://google.com">  
+            <Link href={"https://oauth.deriv.com/oauth2/authorize?app_id=31855&l=PT"}>
               <div className={styles.linkButton}>
                 <b>Acesso ao Bot</b>
               </div>

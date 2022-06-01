@@ -2,25 +2,38 @@ import styles from "../../styles/Admin.module.css"
 import { getSession } from "next-auth/react"
 import server from "../../config"
 
-export default () => {
-    return (<>
-        <div className={styles.background}>
-            <div className={styles.container}>
-                
-                <div className={styles.box}>
-                    <h1> Solicitações de ativação </h1>
+export default function adminPage(props) {
+  const { userList } = props
 
-                    <div className={styles.card}>
-                        <p> {`Nome: ${"Jonathan Lauxen Romano"} `}</p>
-                        <p> {`Email: ${"jjonathanromano@gmail.com"} `}</p>
-                        <p> {`CPF: ${"106.688.179-09"} `}</p>
-                        <button>teste</button>
-                    </div>
+  const chengeUserPermissions = async (email) => {
+    await fetch(`${server}/api/admin/changeUserPermissions/${email}/subscriber`)
+  }
 
-                </div>
-            </div>
-        </div>
-    </>)
+  return (<>
+      <div className={styles.background}>
+          <div className={styles.container}>
+              
+              <div className={styles.box}>
+
+                  <h1> Solicitações de ativação </h1>
+
+                    {
+                      userList.map( user => {
+                        return <div className={styles.card} key={user["email"]}>
+                            <p> Nome: <b>{user['name']}</b></p>
+                            <p> Email: <b>{user['email']}</b></p>
+                            <button onClick={() => chengeUserPermissions(user['email'])}>
+                              Aprovar
+                            </button>
+                          </div>
+                      })
+                    }
+                    <div className={styles.card}/>
+                    
+              </div>
+          </div>
+      </div>
+  </>)
 }
 
 export async function getServerSideProps(context) {
@@ -40,10 +53,15 @@ export async function getServerSideProps(context) {
         }
       }
     }
-  
+
+    const response = await fetch(`${server}/api/admin/getUsers/waitingActivation`)
+    const { userList } = await response.json()
+
     return {
       props: {
-        session: session
+        session: session,
+        userList: userList
       }
     }
   }
+
